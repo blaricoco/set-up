@@ -3,16 +3,10 @@
 # System Variables
 OS="Unknown"
 NAME=""
-HOMEDIR=""
+HOME_DIR=""
 NEWID=""
 DATE=""
 TIME=""
-
-# Personal Variables
-DIARY_DIR=""
-SCRIPTS_DIR=""
-TASKS_DIR=""
-BOOKS_DIR=""
 
 # Find current operating system
 case "$(uname -s)" in
@@ -29,7 +23,7 @@ case "$OS" in
     Linux)
         # Linux-specific command
         NAME=$(whoami)
-        HOMEDIR=$HOME
+        HOME_DIR=$HOME
         NEWID=$(uuidgen)
         DATE=$(date +%Y-%m-%d)
         TIME=$(date +"%H:%M")
@@ -37,7 +31,7 @@ case "$OS" in
     macOS)
         # macOS-specific command
         NAME=$(whoami)
-        HOMEDIR=$HOME
+        HOME_DIR=$HOME
         NEWID=$(uuidgen)
         DATE=$(date +%Y-%m-%d)
         TIME=$(date +"%H:%M")
@@ -45,7 +39,7 @@ case "$OS" in
     Windows)
         # Windows-specific command (assuming you're in a Unix-like environment on Windows)
         NAME=$(cmd.exe /c 'echo %USERNAME%')
-        HOMEDIR=$HOME
+        HOME_DIR=$HOME
         NEWID=$(powershell.exe -Command "[guid]::NewGuid().toString()")
         DATE=$(date +%Y-%m-%d)
         TIME=$(date +"%H:%M")
@@ -55,10 +49,23 @@ case "$OS" in
         ;;
 esac
 
+# Personal Variables
+INDEX_DIR="$HOME_DIR/Home_$NAME/notes/index"
+DIARY_DIR="$INDEX_DIR/diary"
+SCRIPTS_DIR="$INDEX_DIR/scripts"
+TASKS_DIR="$INDEX_DIR/tasks"
+BOOKS_DIR="$INDEX_DIR/books"
+
 
 echo "Operating System : $OS"
 echo "Username         : $NAME"
-echo "Home Directory   : $HOMEDIR"
 echo "NewGuid          : $NEWID"
 echo "Date             : $DATE"
 echo "Time             : $TIME"
+echo "Home Directory   : $HOME_DIR"
+echo "Index Directory  : $INDEX_DIR"
+echo "Diary Directory  : $DIARY_DIR"
+echo "Script Directory : $SCRIPTS_DIR"
+echo "Task Directory   : $TASKS_DIR"
+echo "Book Directory   : $BOOKS_DIR"
+
