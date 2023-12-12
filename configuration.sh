@@ -1,12 +1,18 @@
 #!/bin/bash
 
-# Variable configuration
+# System Variables
 OS="Unknown"
 NAME=""
 HOMEDIR=""
 NEWID=""
 DATE=""
 TIME=""
+
+# Personal Variables
+DIARY_DIR=""
+SCRIPTS_DIR=""
+TASKS_DIR=""
+BOOKS_DIR=""
 
 # Find current operating system
 case "$(uname -s)" in
