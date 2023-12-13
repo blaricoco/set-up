@@ -57,6 +57,7 @@ TASKS_DIR="$INDEX_DIR/tasks"
 BOOKS_DIR="$INDEX_DIR/books"
 
 
+echo ------- Configuration -----------
 echo "Operating System : $OS"
 echo "Username         : $NAME"
 echo "NewGuid          : $NEWID"
@@ -68,4 +69,5 @@ echo "Diary Directory  : $DIARY_DIR"
 echo "Script Directory : $SCRIPTS_DIR"
 echo "Task Directory   : $TASKS_DIR"
 echo "Book Directory   : $BOOKS_DIR"
+echo ---------------------------------
 
