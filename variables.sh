@@ -56,18 +56,21 @@ SCRIPTS_DIR="$INDEX_DIR/scripts"
 TASKS_DIR="$INDEX_DIR/tasks"
 BOOKS_DIR="$INDEX_DIR/books"
 
+# Configuration blocks
+CONFIG_BLOCK_BASH="### BASH_$NAME ###"
 
 echo ------- Configuration -----------
-echo "Operating System : $OS"
-echo "Username         : $NAME"
-echo "NewGuid          : $NEWID"
-echo "Date             : $DATE"
-echo "Time             : $TIME"
-echo "Home Directory   : $HOME_DIR"
-echo "Index Directory  : $INDEX_DIR"
-echo "Diary Directory  : $DIARY_DIR"
-echo "Script Directory : $SCRIPTS_DIR"
-echo "Task Directory   : $TASKS_DIR"
-echo "Book Directory   : $BOOKS_DIR"
+echo "Operating System  : $OS"
+echo "Username          : $NAME"
+echo "NewGuid           : $NEWID"
+echo "Date              : $DATE"
+echo "Time              : $TIME"
+echo "Home Directory    : $HOME_DIR"
+echo "Index Directory   : $INDEX_DIR"
+echo "Diary Directory   : $DIARY_DIR"
+echo "Script Directory  : $SCRIPTS_DIR"
+echo "Task Directory    : $TASKS_DIR"
+echo "Book Directory    : $BOOKS_DIR"
+echo "Config Block Bash : $CONFIG_BLOCK_BASH"
 echo ---------------------------------
 
