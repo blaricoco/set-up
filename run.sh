@@ -11,8 +11,13 @@ configure_bash_file() {
     remove_text_block "$HOME_DIR/.bashrc" "$CONFIG_BLOCK_BASH"
 
     echo $CONFIG_BLOCK_BASH >> $HOME_DIR/.bashrc
+    echo ""   >> $HOME_DIR/.bashrc
+    echo "# CONFIGURATION: VARIABLES "   >> $HOME_DIR/.bashrc
+    echo "source $HOME_DIR/set-up/variables.sh "   >> $HOME_DIR/.bashrc
+    echo ""   >> $HOME_DIR/.bashrc
     cat .bashrc  >> $HOME_DIR/.bashrc
     echo $CONFIG_BLOCK_BASH >> $HOME_DIR/.bashrc
+    src
 }
 
 

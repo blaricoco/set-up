@@ -50,6 +50,7 @@ case "$OS" in
 esac
 
 # Personal Variables
+NOTES_DIR="$HOME_DIR/Home_$NAME/notes"
 INDEX_DIR="$HOME_DIR/Home_$NAME/notes/index"
 DIARY_DIR="$INDEX_DIR/diary"
 SCRIPTS_DIR="$INDEX_DIR/scripts"
@@ -66,6 +67,7 @@ echo "NewGuid           : $NEWID"
 echo "Date              : $DATE"
 echo "Time              : $TIME"
 echo "Home Directory    : $HOME_DIR"
+echo "Notes Directory   : $NOTES_DIR"
 echo "Index Directory   : $INDEX_DIR"
 echo "Diary Directory   : $DIARY_DIR"
 echo "Script Directory  : $SCRIPTS_DIR"
