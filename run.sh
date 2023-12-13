@@ -23,6 +23,6 @@ configure_bash_file() {
 # Run
 configure_bash_file
 
-git_clone_if_not_exists "$NOTES_GIT_URL"  "$NOTES_DIR/notes"
+git_clone_if_not_exists "$NOTES_GIT_URL"  "$NOTES_DIR/notes" "$NOTES_GIT_ACCESS_TOKEN"
 
 

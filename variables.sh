@@ -57,6 +57,7 @@ SCRIPTS_DIR="$INDEX_DIR/scripts"
 TASKS_DIR="$INDEX_DIR/tasks"
 BOOKS_DIR="$INDEX_DIR/books"
 NOTES_GIT_URL="https://github.com/blaricoco/Notes.git"
+NOTES_GIT_ACCESS_TOKEN=""
 
 # Configuration blocks
 CONFIG_BLOCK_BASH="### BASH_$NAME ###"
