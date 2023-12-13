@@ -17,11 +17,18 @@ remove_text_block() {
 git_clone_if_not_exists() {
     local repo_url=$1
     local dir_name=$2
+    local access_token=$3
+    local modified_url=$repo_url
+
+    # Include the access token in the URL if provided
+    if [[ -n $access_token ]]; then
+        modified_url=${repo_url/https:\/\//https:\/\/$access_token@}
+    fi
 
     # Check if the directory already exists
     if [ ! -d "$dir_name" ]; then
         echo "*COMPLETED: Directory $dir_name does not exist. Cloning...*"
-        git clone "$repo_url" "$dir_name"
+        git clone "$modified_url" "$dir_name"    
     else
         echo "*COMPLETED: Directory $dir_name already exists. Skipping clone.*"
     fi
