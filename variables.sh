@@ -78,4 +78,3 @@ echo "Book Directory    : $BOOKS_DIR"
 echo "Notes Git Url     : $NOTES_GIT_URL"
 echo "Config Block Bash : $CONFIG_BLOCK_BASH"
 echo ---------------------------------
-
