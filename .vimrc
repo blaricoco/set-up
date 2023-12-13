@@ -9,7 +9,6 @@ set title
 " Indentation
 set autoindent
 set expandtab
-"set filetype
 set noshiftround
 set shiftwidth=4
 set smarttab
@@ -22,6 +21,15 @@ set ignorecase
 set incsearch
 set smartcase
 
+" Mapping
+nmap <Leader>l :<C-w>l
+nmap <Leader>h :<C-w>h
+let mapleader = "\<space>"
+let g:netrw_altv=1
+let g:netrw_winsize = 30
+nmap <Leader>t :Vexplore<CR>
 
+
+" General
 syntax on
 set nocompatible
