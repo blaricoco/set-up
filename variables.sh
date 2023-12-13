@@ -61,6 +61,7 @@ NOTES_GIT_ACCESS_TOKEN=""
 
 # Configuration blocks
 CONFIG_BLOCK_BASH="### BASH_$NAME ###"
+CONFIG_BLOCK_VIM='""" VIM_'"$NAME"' """'
 
 echo ------- Configuration -----------
 echo "Operating System  : $OS"
@@ -77,4 +78,5 @@ echo "Task Directory    : $TASKS_DIR"
 echo "Book Directory    : $BOOKS_DIR"
 echo "Notes Git Url     : $NOTES_GIT_URL"
 echo "Config Block Bash : $CONFIG_BLOCK_BASH"
+echo "Config Block Vim  : $CONFIG_BLOCK_VIM"
 echo ---------------------------------

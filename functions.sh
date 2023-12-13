@@ -10,7 +10,7 @@ remove_text_block() {
     # Move temporary file to replace original 
     mv "$temp_file" "$file"
 
-    echo "*COMPLETED: remove_text_block*"
+    echo "*COMPLETED: remove_text_block $file*"
 }
 
 

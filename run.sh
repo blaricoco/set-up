@@ -19,10 +19,24 @@ configure_bash_file() {
     echo $CONFIG_BLOCK_BASH >> $HOME_DIR/.bashrc
 }
 
+configure_vim_file() {
+
+    remove_text_block "$HOME_DIR/.vimrc" "$CONFIG_BLOCK_VIM"
+
+    echo $CONFIG_BLOCK_VIM >> $HOME_DIR/.vimrc
+    echo ""   >> $HOME_DIR/.vimrc
+    cat .vimrc  >> $HOME_DIR/.vimrc
+    echo ""   >> $HOME_DIR/.vimrc
+    echo $CONFIG_BLOCK_VIM >> $HOME_DIR/.vimrc
+}
+
+configure_notes_repo() {
+
+    git_clone_if_not_exists "$NOTES_GIT_URL"  "$NOTES_DIR/notes" "$NOTES_GIT_ACCESS_TOKEN"
+}
 
 # Run
 configure_bash_file
-
-git_clone_if_not_exists "$NOTES_GIT_URL"  "$NOTES_DIR/notes" "$NOTES_GIT_ACCESS_TOKEN"
-
+configure_vim_file
+configure_notes_repo
 
