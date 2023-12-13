@@ -6,6 +6,12 @@ set wrap
 set number
 set title
 
+" User Interface
+set visualbell
+set wrap
+set number
+set title
+
 " Indentation
 set autoindent
 set expandtab
