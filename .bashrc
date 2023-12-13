@@ -1,5 +1,9 @@
 
 
-# This is another test 
+# Terminal color 
 
-# set test=test
+alias ls='ls --color=auto'
+alias ll='ls -la --color=auto'
+
+# Bash config
+alias src='source ~/.bashrc'
