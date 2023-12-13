@@ -37,5 +37,5 @@ nmap <Leader>t :Vexplore<CR>
 
 
 " General
-syntax on
+"syntax on
 set nocompatible
