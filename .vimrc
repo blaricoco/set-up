@@ -1,3 +1,3 @@
 set number
-set tittle
+set title
 
