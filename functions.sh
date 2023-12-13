@@ -10,6 +10,19 @@ remove_text_block() {
     # Move temporary file to replace original 
     mv "$temp_file" "$file"
 
-    echo "removed :)"
+    echo "*COMPLETED: remove_text_block*"
 }
 
+
+git_clone_if_not_exists() {
+    local repo_url=$1
+    local dir_name=$2
+
+    # Check if the directory already exists
+    if [ ! -d "$dir_name" ]; then
+        echo "*COMPLETED: Directory $dir_name does not exist. Cloning...*"
+        git clone "$repo_url" "$dir_name"
+    else
+        echo "*COMPLETED: Directory $dir_name already exists. Skipping clone.*"
+    fi
+}

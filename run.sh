@@ -17,13 +17,12 @@ configure_bash_file() {
     echo ""   >> $HOME_DIR/.bashrc
     cat .bashrc  >> $HOME_DIR/.bashrc
     echo $CONFIG_BLOCK_BASH >> $HOME_DIR/.bashrc
-    src
 }
 
 
 # Run
 configure_bash_file
 
-# Test
-tail  $HOME_DIR/.bashrc
+git_clone_if_not_exists "$NOTES_GIT_URL"  "$NOTES_DIR/notes"
+
 

@@ -50,12 +50,13 @@ case "$OS" in
 esac
 
 # Personal Variables
-NOTES_DIR="$HOME_DIR/Home_$NAME/notes"
+NOTES_DIR="$HOME_DIR/Home_$NAME"
 INDEX_DIR="$HOME_DIR/Home_$NAME/notes/index"
 DIARY_DIR="$INDEX_DIR/diary"
 SCRIPTS_DIR="$INDEX_DIR/scripts"
 TASKS_DIR="$INDEX_DIR/tasks"
 BOOKS_DIR="$INDEX_DIR/books"
+NOTES_GIT_URL="https://github.com/blaricoco/Notes.git"
 
 # Configuration blocks
 CONFIG_BLOCK_BASH="### BASH_$NAME ###"
@@ -73,6 +74,7 @@ echo "Diary Directory   : $DIARY_DIR"
 echo "Script Directory  : $SCRIPTS_DIR"
 echo "Task Directory    : $TASKS_DIR"
 echo "Book Directory    : $BOOKS_DIR"
+echo "Notes Git Url     : $NOTES_GIT_URL"
 echo "Config Block Bash : $CONFIG_BLOCK_BASH"
 echo ---------------------------------
 
