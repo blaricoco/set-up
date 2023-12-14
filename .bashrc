@@ -1,3 +1,7 @@
+# CONFIGURATION: EXPORT
+export PATH=$PATH:$SCRIPTS_DIR
+export OS=$OS
+
 # CONFIGURATION: COLOR
 alias ls='ls --color=auto'
 alias ll='ls -la --color=auto'
