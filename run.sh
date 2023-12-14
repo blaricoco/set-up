@@ -15,7 +15,7 @@ configure_bash_file() {
     echo "# CONFIGURATION: SOURCE"   >> $HOME_DIR/.bashrc
     echo "source $HOME_DIR/set-up/variables.sh "   >> $HOME_DIR/.bashrc
     echo ""   >> $HOME_DIR/.bashrc
-    cat .bashrc  >> $HOME_DIR/.bashrc
+    cat .bashrc | sed 's/\r//'  >> $HOME_DIR/.bashrc
     echo $CONFIG_BLOCK_BASH >> $HOME_DIR/.bashrc
 }
 
@@ -25,7 +25,7 @@ configure_vim_file() {
 
     echo $CONFIG_BLOCK_VIM >> $HOME_DIR/.vimrc
     echo ""   >> $HOME_DIR/.vimrc
-    cat .vimrc  >> $HOME_DIR/.vimrc
+    cat .vimrc | sed 's/\r//' >> $HOME_DIR/.vimrc
     echo ""   >> $HOME_DIR/.vimrc
     echo $CONFIG_BLOCK_VIM >> $HOME_DIR/.vimrc
 }
