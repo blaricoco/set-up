@@ -12,8 +12,9 @@ configure_bash_file() {
 
     echo $CONFIG_BLOCK_BASH >> $HOME_DIR/.bashrc
     echo ""   >> $HOME_DIR/.bashrc
-    echo "# CONFIGURATION: VARIABLES "   >> $HOME_DIR/.bashrc
+    echo "# CONFIGURATION: IMPORT"   >> $HOME_DIR/.bashrc
     echo "source $HOME_DIR/set-up/variables.sh "   >> $HOME_DIR/.bashrc
+    echo "export PATH=\$PATH:$SCRIPTS_DIR"   >> $HOME_DIR/.bashrc
     echo ""   >> $HOME_DIR/.bashrc
     cat .bashrc  >> $HOME_DIR/.bashrc
     echo $CONFIG_BLOCK_BASH >> $HOME_DIR/.bashrc
