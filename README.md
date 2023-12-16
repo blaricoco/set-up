@@ -20,4 +20,15 @@ This is the main script which will be used for the setup based on the variables 
 * configure_vim_file
 * configure_notes_repo
 
-
+## TODO
+* [ ] Filter: 
+    * [ ] Functions:
+        * [ ] Create Filter
+        * [ ] Grep DESCRIPTION AND REQUIREMENTS
+* [ ] Tasks:
+    * [ ] Clean the unused scripts folder
+    * [ ] functions:
+        * [ ] Create new Tasks
+        * [ ] Move tasks to/from completed folder
+        * [ ] grep info from pending Tasks
+* [ ] 

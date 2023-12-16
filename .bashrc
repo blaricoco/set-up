@@ -7,21 +7,32 @@ export NAME=$NAME
 alias ls='ls --color=auto'
 alias ll='ls -la --color=auto'
 
-# CONFIGURATION: BASH
+# CONFIGURATION: SHORTCUTS
 alias src='source ~/.bashrc'
 alias notes="cd $NOTES_DIR/notes ; vim README.md"
 alias setup="cd $HOME_DIR/set-up; ll"
 alias filters="cd $SCRIPTS_DIR/filters ; ll"
 
-# CONFIGURATION: FILTERS
-
-# CONFIGURATION: DIARY
+# CONFIGURATION: IMPORT FUNCTIONS
+source $SCRIPTS_DIR/scripts_filter.sh
 source $SCRIPTS_DIR/scripts_diary.sh
 
-## Create new entry
-function diary() {
+# CONFIGURATION: PRINT DESCRIPTIONS
+function dfilters() {
+    print_description_by_keyword "$SCRIPTS_DIR/filters" "# FILTER"
+}
+
+function dfunctions() {
+    print_description_by_keyword "$SCRIPTS_DIR" "# FUNCTION"
+}
+
+# CONFIGURATION: DIARY
+
+## New Diary
+function ndiary() {
     diary_new_entry $DIARY_DIR    
 }
 
 # CONFIGURATION: TASKS
+
 
