@@ -19,7 +19,13 @@ source $SCRIPTS_DIR/scripts_diary.sh
 
 # CONFIGURATION: PRINT DESCRIPTIONS
 function dfilters() {
-    print_description_by_keyword "$SCRIPTS_DIR/filters" "# FILTER"
+    print_description_by_keyword "$FILTERS_DIR" "# FILTER"
+    cd "$FILTERS_DIR"
+}
+
+function dscripts() {
+    print_description_by_keyword "$SCRIPTS_DIR" "# SCRIPT"
+    cd "$SCRIPTS_DIR"
 }
 
 function dfunctions() {
@@ -28,6 +34,7 @@ function dfunctions() {
 
 function dtasks() {
     print_description_by_keyword "$TASKS_DIR" "TASK"
+    cd "$TASKS_DIR"
 }
 
 # CONFIGURATION: DIARY
