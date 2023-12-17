@@ -16,6 +16,7 @@ alias filters="cd $SCRIPTS_DIR/filters ; ll"
 # CONFIGURATION: IMPORT FUNCTIONS
 source $SCRIPTS_DIR/scripts_filter.sh
 source $SCRIPTS_DIR/scripts_diary.sh
+source $SCRIPTS_DIR/scripts_task.sh
 
 # CONFIGURATION: PRINT DESCRIPTIONS
 function dfilters() {
@@ -46,4 +47,17 @@ function ndiary() {
 
 # CONFIGURATION: TASKS
 
+## TODO: Move function to tasks scripts_task
+## TODO: Create new task if it does not exist
+function task() {
+    local TASK_NUMBER=$1
+    local TASK_NUMBER_DIR="$TASKS_DIR/task/$TASK_NUMBER"
 
+    if [ -d "$TASK_NUMBER_DIR" ]; then
+        # print description 
+        print_description_by_keyword "$TASK_NUMBER_DIR" "TASK"
+        cd $TASKS_DIR
+    else
+        echo "Task does not exist!"
+    fi
+}
