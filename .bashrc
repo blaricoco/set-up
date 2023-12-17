@@ -26,6 +26,10 @@ function dfunctions() {
     print_description_by_keyword "$SCRIPTS_DIR" "# FUNCTION"
 }
 
+function dtasks() {
+    print_description_by_keyword "$TASKS_DIR" "TASK"
+}
+
 # CONFIGURATION: DIARY
 
 ## New Diary
