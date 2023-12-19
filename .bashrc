@@ -11,7 +11,6 @@ alias ll='ls -la --color=auto'
 alias src='source ~/.bashrc'
 alias notes="cd $NOTES_DIR/notes ; vim README.md"
 alias setup="cd $HOME_DIR/set-up; ll"
-alias filters="cd $SCRIPTS_DIR/filters ; ll"
 
 # CONFIGURATION: IMPORT FUNCTIONS
 source $SCRIPTS_DIR/scripts_filter.sh
@@ -19,12 +18,12 @@ source $SCRIPTS_DIR/scripts_diary.sh
 source $SCRIPTS_DIR/scripts_task.sh
 
 # CONFIGURATION: PRINT DESCRIPTIONS
-function dfilters() {
+function filters() {
     print_description_by_keyword "$FILTERS_DIR" "# FILTER"
     cd "$FILTERS_DIR"
 }
 
-function dscripts() {
+function scripts() {
     print_description_by_keyword "$SCRIPTS_DIR" "# SCRIPT"
     cd "$SCRIPTS_DIR"
 }
@@ -33,7 +32,7 @@ function dfunctions() {
     print_description_by_keyword "$SCRIPTS_DIR" "# FUNCTION"
 }
 
-function dtasks() {
+function tasks() {
     print_description_by_keyword "$TASKS_DIR" "TASK"
     cd "$TASKS_DIR"
 }
@@ -56,7 +55,7 @@ function task() {
     if [ -d "$TASK_NUMBER_DIR" ]; then
         # print description 
         print_description_by_keyword "$TASK_NUMBER_DIR" "TASK"
-        cd $TASKS_DIR
+        cd "$TASK_NUMBER_DIR"
     else
         echo "Task does not exist!"
     fi
