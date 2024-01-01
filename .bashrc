@@ -4,8 +4,11 @@ export OS=$OS
 export NAME=$NAME
 
 # CONFIGURATION: COLOR
-alias ls='ls --color=auto'
-alias ll='ls -la --color=auto'
+export LSCOLORS=ExGxBxDxCxEgEdxbxgxcxd
+export CLICOLOR=1
+alias ls='ls --color=auto -G'
+alias ll='ls -Gla --color=auto'
+
 
 # CONFIGURATION: SHORTCUTS
 alias src='source ~/.bashrc'
