@@ -3,12 +3,29 @@ export PATH=$PATH:$SCRIPTS_DIR/filters
 export OS=$OS
 export NAME=$NAME
 
-# CONFIGURATION: COLOR
+# CONFIGURATION: BASH PROMPT
+DF='\[\e[0m\]'
+BYELLOW='\[\e[1;33m\]'
+BGREEN='\[\e[1;32m\]'
+BRED='\[\e[1;31m\]'
+
+PROMPT_COMMAND='PS1_GIT_BRANCH=$(parse_git_branch)'
+PS1="\h@\u:${BRED}\W${BGREEN}\$PS1_GIT_BRANCH${DF} \$ "
+
 export LSCOLORS=ExGxBxDxCxEgEdxbxgxcxd
 export CLICOLOR=1
+
+parse_git_branch() {
+    # Check if the current directory is in a Git repository
+    if git rev-parse --git-dir > /dev/null 2>&1; then
+        # Get the current Git branch
+        git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/ (\1)/'
+    fi
+}
+
+# CONFIGURATION: COLOR
 alias ls='ls --color=auto -G'
 alias ll='ls -Gla --color=auto'
-
 
 # CONFIGURATION: SHORTCUTS
 alias src='source ~/.bashrc'
