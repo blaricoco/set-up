@@ -9,8 +9,11 @@ BYELLOW='\[\e[1;33m\]'
 BGREEN='\[\e[1;32m\]'
 BRED='\[\e[1;31m\]'
 
-PROMPT_COMMAND='PS1_GIT_BRANCH=$(parse_git_branch)'
-PS1="\h@\u:${BRED}\W${BGREEN}\$PS1_GIT_BRANCH${DF} \$ "
+COMMAND_COUNTER=0
+PROMPT_COMMAND='PS1_GIT_BRANCH=$(parse_git_branch); ((COMMAND_COUNTER++)); CURRENT_DATETIME=$(date "+%Y-%m-%d %H:%M:%S")'
+
+#PS1="(\$COMMAND_COUNTER) [$CURRENT_DATETIME] \h@\u:${BRED}\W${BGREEN}\$PS1_GIT_BRANCH${DF} \$ "
+PS1="${BYELLOW}[$CURRENT_DATETIME]${DF} \u:${BRED}\W${BGREEN}\$PS1_GIT_BRANCH${DF} \$ "
 
 export LSCOLORS=ExGxBxDxCxEgEdxbxgxcxd
 export CLICOLOR=1
