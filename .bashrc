@@ -33,6 +33,7 @@ alias ll='ls -Gla --color=auto'
 alias src='source ~/.bashrc'
 alias notes="cd $NOTES_DIR/notes ; vim README.md"
 alias setup="cd $HOME_DIR/set-up; ll"
+alias home="cd $NOTES_DIR ; ll"
 
 # CONFIGURATION: IMPORT FUNCTIONS
 source $SCRIPTS_DIR/scripts_filter.sh
